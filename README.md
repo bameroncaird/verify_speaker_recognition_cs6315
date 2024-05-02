@@ -12,6 +12,14 @@ For our experiments, we used the `train-clean-100` partition of the [LibriSpeech
 
 For training the models in Python, we used TensorFlow 2.15. To install the dependencies, we simply followed the [TensorFlow documentation](https://www.tensorflow.org/) and used `pip install` when necessary inside a `conda` environment. The models were converted to MATLAB via the command line and the `convert_tensorflow_to_matlab.m` script.
 
+This project heavily uses the Neural Network Verification tool ([link](https://github.com/verivital/nnv)). You will need to install NNV before you can run our examples using the README found in the linked repository. After NNV is installed, you should be able to run the `src_matlab/*.m` files from this repository.
+
 ### Verifying a Single Example
 
-TO-DO: Finish writing this readme. Can we get a plot or two up? Anything else I need to add?
+To see an example of verifying one input audio, you can check `src_matlab/verify_single_audio_waveform.m`. The script will load in a pre-trained model to MATLAB and NNV, create a Star or ImageStar set based on the input audio, verify its robustness using NNV, and plot the output ranges of the input audio. Below is a plot from an example where the network was verified to be robust; you can see that the output ranges of the target class (1) do not overlap with any other classes.
+
+![An example plot of the output ranges from NNV's robustness verification.](file_image_name)
+
+### Contact
+
+This repository is for a class final project. Therefore, it is far from complete. If there are any errors with the code, or you have more questions about the project, please contact `cameron.j.baird@vanderbilt.edu`.
