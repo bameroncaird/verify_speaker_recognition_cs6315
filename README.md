@@ -18,7 +18,7 @@ This project heavily uses the Neural Network Verification tool ([link](https://g
 
 To see an example of verifying one input audio, you can check `src_matlab/verify_single_audio_waveform.m`. The script will load in a pre-trained model to MATLAB and NNV, create a Star or ImageStar set based on the input audio, verify its robustness using NNV, and plot the output ranges of the input audio. Below is a plot from an example where the network was verified to be robust; you can see that the output ranges of the target class (1) do not overlap with any other classes.
 
-![An example plot of the output ranges from NNV's robustness verification.](file_image_name)
+![An example plot of the output ranges from NNV's robustness verification.](https://github.com/bameroncaird/verify_speaker_recognition_cs6315/blob/main/github_nnv_example.png?raw=true)
 
 ### Contact
 
